@@ -1,13 +1,79 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@200;300;400&display=swap');
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{@apply m-0 p-0 font-nunito text-[14px] text-[#fff] bg-[#121420];}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0;} /* Chrome, Safari, Edge, Opera */
+input[type=number]{-moz-appearance:textfield;} /* Firefox */
+.wrapper{@apply relative;}
+.content{@apply pt-[50px] pb-[70px] px-3;}
+
+.card-option2{@apply w-full h-full mt-2 bg-[#1b1d2a];}
+.card-option2 .price-box{@apply flex justify-center items-center flex-row flex-nowrap border-b border-[#272936];}
+.card-option2 .price-box .price-content{@apply flex-1 py-3 px-2 text-center;}
+.card-option2 .price-box .price-content .price-cell:first-child span{@apply block text-sm font-semibold text-gray-400;}
+.card-option2 .price-box .price-content .price-cell:nth-child(2) span{@apply block mt-1 text-lg font-bold;}
+.card-option2 .price-box .price-content .price-cell:last-child span{@apply block mt-1 text-sm font-semibold text-gray-100;}
+.card-option2 .price-box .price-content .price-cell span.cred{@apply text-[#f5465c];}
+.card-option2 .price-box .price-content .price-cell span.cgreen{@apply text-[#3db485];}
+
+.alert-notice{@apply flex justify-start items-center flex-row flex-nowrap mt-[5px] px-[10px];}
+.alert-notice .alert-icon{@apply py-[10px] px-[17px];}
+.alert-notice .alert-icon svg{@apply text-[#4bc9a9];}
+.alert-notice .alert-list{@apply flex-1 leading-[25px] border-none overflow-hidden;}
+.alert-notice .alert-item{@apply h-[25px];}
+
+.market{@apply w-full h-full mt-2 bg-[#1b1d2a];}
+.market .market-head{@apply w-full px-2;}
+.market .market-head .market-row{@apply flex justify-center items-center flex-nowrap flex-row;}
+.market .market-head .market-row .market-cell{@apply flex-1 py-2 px-1;}
+.market .market-head .market-row .market-cell:nth-child(2){@apply text-center;}
+.market .market-head .market-row .market-cell:last-child{@apply w-[95%] text-right text-ellipsis whitespace-nowrap overflow-hidden;}
+.market .market-head .market-row .market-cell span{@apply text-sm font-bold text-gray-400 text-left;}
+.market .market-body{@apply w-full px-2;}
+.market .market-body .market-row{@apply flex justify-center items-center flex-nowrap flex-row;}
+.market .market-body .market-row .market-cell{@apply flex-1 py-2 px-1;}
+.market .market-body .market-row .market-cell:nth-child(2){@apply text-center;}
+.market .market-body .market-row .market-cell:last-child{@apply text-right;}
+.market .market-body .market-row .market-cell span{@apply text-xs font-bold text-gray-100 text-left;}
+.market .market-body .market-row .market-cell span.cred{@apply inline-block w-[70px] h-[30px] leading-[30px] text-[#f5465c] text-center rounded-md bg-[#3b2937];}
+.market .market-body .market-row .market-cell span.cgreen{@apply inline-block w-[70px] h-[30px] leading-[30px] text-[#3db485] text-center rounded-md bg-[#1e363a];}
+.market .market-body .market-row .market-cell:first-child{@apply flex justify-start items-center flex-row flex-nowrap;}
+.market .market-body .market-row .market-cell:first-child img{@apply w-5 h-5 rounded-full;}
+.market .market-body .market-row .market-cell:first-child span{@apply ml-2 text-sm font-bold;}
+
+.card-option1{@apply w-full h-full mt-2 bg-[#1b1d2a];}
+.card-option1 .option-box{@apply flex justify-start items-center flex-row flex-nowrap;}
+.card-option1 .option-box a{@apply flex-1 py-[8px] px-[10px];}
+.card-option1 .option-box a .option-item{@apply flex justify-center items-center flex-col flex-wrap;}
+.card-option1 .option-icon img{@apply w-[35px];}
+.card-option1 .option-text span{@apply block w-full mt-1.5 text-white;}
+
+.banner .swiper .swiper-slide img{@apply block w-full h-[200px];}
+
+.tabbar{@apply fixed bottom-0 w-full bg-[#222430] z-50;}
+.tabbar .tabbar-content{@apply flex justify-center items-center;}
+.tabbar .appbar-item{@apply flex justify-center items-center flex-col flex-wrap flex-1 py-1 text-center;}
+.tabbar .appbar-item span{@apply mt-1 text-sm text-gray-400;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
