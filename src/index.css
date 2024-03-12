@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body{@apply m-0 p-0 font-nunito text-[14px] text-[#fff] bg-[#121420];}
+body{@apply m-0 p-0 font-roboto text-[14px] text-[#fff] bg-[#121420];}
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0;} /* Chrome, Safari, Edge, Opera */
 input[type=number]{-moz-appearance:textfield;} /* Firefox */
 .wrapper{@apply relative;}
 .content{@apply pt-[50px] pb-[70px] px-3;}
+.sa-content-login{@apply pt-[50px] px-3;}
 
 .card-option2{@apply w-full h-full mt-2 bg-[#1b1d2a];}
 .card-option2 .price-box{@apply flex justify-center items-center flex-row flex-nowrap border-b border-[#272936];}
@@ -58,10 +59,21 @@ input[type=number]{-moz-appearance:textfield;} /* Firefox */
 .tabbar .appbar-item{@apply flex justify-center items-center flex-col flex-wrap flex-1 py-1 text-center;}
 .tabbar .appbar-item span{@apply mt-1 text-sm text-gray-400;}
 
-
-
-
-
+.sa-frm-group{@apply mt-[25px];}
+.sa-frm-group:first-child{@apply mt-0;}
+.sa-frm-label{@apply block mb-[10px] text-sm text-[#888e99];}
+.sa-frm-control{@apply w-full h-[40px] px-3 text-base rounded-[5px] bg-[#28303c] focus:outline-none;}
+.sa-input-group{@apply relative;}
+.sa-input-group .sa-input-group-text{@apply absolute top-2/4 right-0 translate-y-[-50%] translate-x-[-50%];}
+.sa-input-group .sa-frm-control{@apply pl-3 pr-[52px];}
+.sa-input-group .sa-input-group-text svg{@apply text-[#505766];}
+.sa-content-btn{@apply mt-[25px];}
+.sa-btn-login{@apply w-full h-[40px] text-base font-medium text-[#0b0e11] rounded-[5px] bg-[#FBD849];}
+.sa-btn-google{@apply flex justify-center items-center gap-2 w-full h-[40px] text-base text-[#0b0e11] rounded-[5px] bg-white;}
+.sa-btn-google svg{@apply w-4;}
+.sa-theme-text{@apply relative flex items-center max-w-full py-2.5 text-base font-medium bg-transparent;}
+.sa-theme-text span{@apply flex-1 h-[1px] bg-[#41464e];}
+.sa-theme-text p{@apply px-[10px] text-[#848E9C];}
 
 
 

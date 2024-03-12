@@ -1,13 +1,33 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Icon } from '@iconify/react';
-
-import IconCashBack from '../assets/ic/ic_cashback.png'
-import IconWithdraw from '../assets/ic/ic_withdraw.png'
+import http from '../services/api.js'
 
 const Home = () => {
+    // const [listCoin, setListCoin] = useState()
+    // const apiKey = 'vmPUZE6mv9SD5VNHk4HlWFsOr6aKE2zvsw0MuIgwCIPy6utIco14y7Ju91duEh8A';
+    // const secretKey = 'NhqPtmdSJYdKjVHjA7PZj4Mge3R5YNiP1e3UZjInClVN65XAbvqqM6A7H5fATj0j';
+
+    // const fetchCoin = async () => {
+    //     try {
+    //         const response = await http.get('api/v3/ticker/price', {
+    //             params: {
+    //                 symbol: 'BTCUSDT',
+    //                 apiKey: apiKey
+    //             }
+    //         })
+    //         console.log(response.data)
+    //         setListCoin(response.data)
+    //     } catch (error) {
+    //         console.error('Error fetching data:', error)
+    //     }
+    // }
+
+    // useEffect(() => {
+    //     fetchCoin()
+    // }, [])
     return (
         <>
             <div className="banner">
@@ -27,7 +47,7 @@ const Home = () => {
             </div>
             <div className="card-option1">
                 <div className="option-box">
-                    <Link to="">
+                    <Link to="/deposit">
                         <div className="option-item">
                             <div className="option-icon">
                                 <Icon icon="solar:cash-out-line-duotone" width="26" height="26" />
@@ -35,10 +55,10 @@ const Home = () => {
                             <div className="option-text"><span>Deposit</span></div>
                         </div>
                     </Link>
-                    <Link to="">
+                    <Link to="/withdraw">
                         <div className="option-item">
                             <div className="option-icon">
-                                <img src={IconWithdraw} alt=""/>
+                                <Icon icon="ph:rocket-duotone" width="26" height="26" />
                             </div>
                             <div className="option-text"><span>Withdraw</span></div>
                         </div>
@@ -46,7 +66,7 @@ const Home = () => {
                     <Link to="">
                         <div className="option-item">
                             <div className="option-icon">
-                                <img src="https://www.siamblockchaincompany.com/Public/Static/Icoinfont/icon/icon-4.png" alt=""/>
+                                <Icon icon="ph:gavel-duotone" width="26" height="26" />
                             </div>
                             <div className="option-text"><span>Machine</span></div>
                         </div>
