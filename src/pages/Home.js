@@ -3,31 +3,22 @@ import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Icon } from '@iconify/react';
-import http from '../services/api.js'
+import alpacaService from '../services/api.js'
 
 const Home = () => {
-    // const [listCoin, setListCoin] = useState()
-    // const apiKey = 'vmPUZE6mv9SD5VNHk4HlWFsOr6aKE2zvsw0MuIgwCIPy6utIco14y7Ju91duEh8A';
-    // const secretKey = 'NhqPtmdSJYdKjVHjA7PZj4Mge3R5YNiP1e3UZjInClVN65XAbvqqM6A7H5fATj0j';
+    const fetchCoin = async () => {
+        try {
+            const response = await alpacaService.get('/v1/assets');
+            return response.data;
+        } catch (error) {
+            console.error('Error fetching data:', error)
+            throw error
+        }
+    }
 
-    // const fetchCoin = async () => {
-    //     try {
-    //         const response = await http.get('api/v3/ticker/price', {
-    //             params: {
-    //                 symbol: 'BTCUSDT',
-    //                 apiKey: apiKey
-    //             }
-    //         })
-    //         console.log(response.data)
-    //         setListCoin(response.data)
-    //     } catch (error) {
-    //         console.error('Error fetching data:', error)
-    //     }
-    // }
-
-    // useEffect(() => {
-    //     fetchCoin()
-    // }, [])
+    useEffect(() => {
+        fetchCoin()
+    }, [])
     return (
         <>
             <div className="banner">
